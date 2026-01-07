@@ -2,10 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/cabinet-repo" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/consultation-service-api" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/medecin-service-api" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/patient-service-api" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/rendezvous-service-api" vcs="Git" />
   </component>
 </project>
