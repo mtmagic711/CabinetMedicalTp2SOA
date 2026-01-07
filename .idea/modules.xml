@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CabinetMedicalTp2SOA.iml" filepath="$PROJECT_DIR$/.idea/CabinetMedicalTp2SOA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cabinet-esb/cabinet-esb.iml" filepath="$PROJECT_DIR$/cabinet-esb/cabinet-esb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cabinet-repo/cabinet-repo.iml" filepath="$PROJECT_DIR$/cabinet-repo/cabinet-repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consultation-service-api/consultation-service-api.iml" filepath="$PROJECT_DIR$/consultation-service-api/consultation-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/medecin-service-api/medecin-service-api.iml" filepath="$PROJECT_DIR$/medecin-service-api/medecin-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patient-service-api/patient-service-api.iml" filepath="$PROJECT_DIR$/patient-service-api/patient-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rendezvous-service-api/rendezvous-service-api.iml" filepath="$PROJECT_DIR$/rendezvous-service-api/rendezvous-service-api.iml" />
+    </modules>
+  </component>
+</project>
