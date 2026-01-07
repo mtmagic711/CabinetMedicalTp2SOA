@@ -6,9 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-// 1. Force Spring to look for Entities (Database Tables) in the repo library
 @EntityScan(basePackages = "ma.fsr.soa.cabinetrepo.model")
-// 2. Force Spring to look for Repositories (SQL Logic) in the repo library
 @EnableJpaRepositories(basePackages = "ma.fsr.soa.cabinetrepo.repository")
 public class MedecinServiceApiApplication {
 

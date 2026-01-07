@@ -22,21 +22,13 @@ public class MedecinController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getOne(@PathVariable Long id) {
-        try {
-            return ResponseEntity.ok(medecinService.findMedecin(id));
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        }
+    public Medecin findMedecin(@PathVariable Long id) throws Exception{
+        return medecinService.findMedecin(id);
     }
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody Medecin medecin) {
-        try {
-            return ResponseEntity.status(HttpStatus.CREATED).body(medecinService.create(medecin));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+    public Medecin create(@RequestBody Medecin medecin) throws Exception{
+        return medecinService.create(medecin);
     }
 
 //    @PutMapping("/{id}")

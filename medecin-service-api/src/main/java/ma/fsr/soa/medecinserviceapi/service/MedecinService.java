@@ -15,19 +15,15 @@ public class MedecinService {
 
     // 1. CREATE
     public Medecin create(Medecin medecin) throws Exception {
-        // Rule: Name is mandatory
         if (medecin.getNom() == null)
             throw new Exception("Le nom du médecin est obligatoire.");
 
-        // Rule: Email is mandatory
         if (medecin.getEmail() == null)
             throw new Exception("L'email du médecin est obligatoire.");
 
-        // Rule: Email must be valid (contains '@')
         if (!medecin.getEmail().contains("@"))
             throw new Exception("Email du médecin invalide.");
 
-        // Rule: Specialty is mandatory
         if (medecin.getSpecialite() == null || medecin.getSpecialite().isEmpty())
             throw new Exception("La spécialité du médecin est obligatoire.");
 
