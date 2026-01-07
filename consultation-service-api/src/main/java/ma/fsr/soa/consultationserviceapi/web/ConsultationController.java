@@ -24,7 +24,6 @@ public class ConsultationController {
         return consultationService.findConsultation(id);
     }
 
-    // Matches ESB route: /api/consultations/rendezvous/{id}
     @GetMapping("/rendezvous/{id}")
     public List<Consultation> findByRendezVous(@PathVariable Long id) {
         return consultationService.findByRendezVous(id);

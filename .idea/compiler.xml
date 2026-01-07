@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -22,14 +23,14 @@
         <module name="cabinet-repo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="cabinet-esb" target="19" />
-      <module name="cabinet-repo" target="19" />
-      <module name="CabinetMedicalTp2SOA" target="1.5" />
-      <module name="consultation-service-api" target="19" />
-      <module name="medecin-service-api" target="19" />
-      <module name="patient-service-api" target="19" />
-      <module name="rendezvous-service-api" target="19" />
+    <bytecodeTargetLevel target="17">
+      <module name="cabinet-esb" target="17" />
+      <module name="cabinet-repo" target="17" />
+      <module name="CabinetMedicalTp2SOA" target="17" />
+      <module name="consultation-service-api" target="17" />
+      <module name="medecin-service-api" target="17" />
+      <module name="patient-service-api" target="17" />
+      <module name="rendezvous-service-api" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
