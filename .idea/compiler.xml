@@ -13,7 +13,7 @@
         <module name="patient-service-api" />
         <module name="cabinet-esb" />
       </profile>
-      <profile name="Annotation profile for cabinet-repo" enabled="true">
+      <profile name="Annotation profile for cabinetMedicalTp2SOA" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -23,14 +23,14 @@
         <module name="cabinet-repo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="17">
-      <module name="cabinet-esb" target="17" />
-      <module name="cabinet-repo" target="17" />
-      <module name="CabinetMedicalTp2SOA" target="17" />
-      <module name="consultation-service-api" target="17" />
-      <module name="medecin-service-api" target="17" />
-      <module name="patient-service-api" target="17" />
-      <module name="rendezvous-service-api" target="17" />
+    <bytecodeTargetLevel target="19">
+      <module name="cabinet-esb" target="19" />
+      <module name="cabinet-repo" target="19" />
+      <module name="CabinetMedicalTp2SOA" target="1.5" />
+      <module name="consultation-service-api" target="19" />
+      <module name="medecin-service-api" target="19" />
+      <module name="patient-service-api" target="19" />
+      <module name="rendezvous-service-api" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

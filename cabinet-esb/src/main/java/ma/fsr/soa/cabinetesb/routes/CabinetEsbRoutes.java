@@ -121,15 +121,29 @@ public class CabinetEsbRoutes extends RouteBuilder {
     /**
      * Proxy générique : propage méthode, body, headers et renvoie le code HTTP du service interne.
      */
+    /**
+     * Proxy générique : propage méthode, body, headers et renvoie le code HTTP du service interne.
+     */
+    /**
+     * Proxy générique : propage méthode, body, headers et renvoie le code HTTP du service interne.
+     */
     private void proxy(String fromDirect, String toHttpUrl) {
         from(fromDirect)
                 .routeId(fromDirect.replace("direct:", "route_"))
-                .log("ESB ${header.CamelHttpMethod} ${header.CamelHttpPath} -> " + toHttpUrl)
-                // On force la méthode HTTP vers le composant http
+                .log("ESB ${header.CamelHttpMethod} -> " + toHttpUrl)
+
+                // 1. Force the HTTP Method (GET, POST, etc.)
                 .setHeader(Exchange.HTTP_METHOD, header("CamelHttpMethod"))
-                // Appel HTTP interne
+
+                // 2. CRITICAL FIX: Clear the "Path" and "Uri" headers.
+                // This stops Camel from appending "/api/rendezvous" to your URL.
+                .setHeader(Exchange.HTTP_PATH, constant(""))
+                .setHeader(Exchange.HTTP_URI, constant(""))
+
+                // 3. Enable bridgeEndpoint=true to satisfy the Camel validation check
                 .toD("http:" + toHttpUrl + "?bridgeEndpoint=true&throwExceptionOnFailure=false")
-                // Propage code HTTP du backend
+
+                // 4. Forward the response code (200, 404, 500) back to the user
                 .process(e -> {
                     Integer code = e.getMessage().getHeader(Exchange.HTTP_RESPONSE_CODE, Integer.class);
                     if (code != null) {
