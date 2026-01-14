@@ -2,6 +2,7 @@ package ma.fsr.soa.rendezvousserviceapi.web;
 
 import ma.fsr.soa.cabinetrepo.model.RendezVous;
 import ma.fsr.soa.rendezvousserviceapi.service.RendezVousService;
+import ma.fsr.soa.rendezvousserviceapi.web.dto.RendezVousDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,8 +36,8 @@ public class RendezVousController {
     }
 
     @PostMapping
-    public RendezVous create(@RequestBody RendezVous rendezVous) throws Exception {
-        return rendezVousService.create(rendezVous);
+    public RendezVous create(@RequestBody RendezVousDto rdvDto) throws Exception {
+        return rendezVousService.create(rdvDto);
     }
 
     @DeleteMapping("/{id}")
